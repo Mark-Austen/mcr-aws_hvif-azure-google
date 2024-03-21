@@ -39,6 +39,7 @@ This example deploys end-to-end multicloud connectivity between an AWS VPC and A
 
 * This example will not work on the Megaport Staging environment. This is because it requires
 real connections to AWS and Azure.
+* It helps if you're not logged into mutliple Microsoft accounts while running this.
 * The Azure ExpressRoute Gateway can take up to 20 minutes to deploy.
 * When you have completed, use `terraform destroy` so that you will stop incurring costs for the resources.
 * When destroying the deployment Terraform will prompt one two errors:
