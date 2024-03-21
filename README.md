@@ -42,8 +42,13 @@ real connections to AWS and Azure.
 * The Azure ExpressRoute Gateway can take up to 20 minutes to deploy.
 * When you have completed, use `terraform destroy` so that you will stop incurring costs for the resources.
 * When destroying the deployment Terraform will prompt one two errors:
-* 
-* 
+  * ExpressRoute Private Peering exists - login to the Azure console > ExpressRoute circuit > using the ... option next to the Private Peering configuration delete the Private Peering. When deletion is complete re-run `terraform destory`.
+  * AWS Virtual Gateway removal pending another operation - the re-run of `terraform destroy` will clear this.
+
+### Testing
+
+* As this is a baseline networking deployment I haven't included VMs but you can add these as required to run connectivity checks/tests.
+* Route advertisment between clouds can be checked using the Megaport MCR Looking Glass - BGP neighbours to both AWS and Azure should be up and 10.0.0.0/16 from AWS and 10.1.0.0/16 from Azure received.
 
 
 
