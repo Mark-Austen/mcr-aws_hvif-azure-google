@@ -1,3 +1,5 @@
+For Megaport provider v1.0.0-rc1
+
 This example deploys end-to-end multicloud connectivity between an AWS VPC and Azure VNet using the Megaport Cloud Router (MCR). The following resources are deployed:
 
 * Megaport Cloud Router (MCR)
