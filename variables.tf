@@ -185,7 +185,7 @@ variable "azure_vpn_gateway_gen" {
 
 variable "aws_account_id" {
   description = "AWS Account ID"
-  default     = "370553169139"
+  default     = "account ID"
 }
 
 variable "aws_region" {
@@ -193,37 +193,37 @@ variable "aws_region" {
   default     = "ap-southeast-2"
 }
 
-variable "aws_vpc_name" {
+variable "aws_vpc_1_name" {
   description = "The name for the AWS VPC."
   default     = "Demo-VPC-SYD"
 }
 
-variable "aws_vpc_cidr" {
+variable "aws_vpc_1_cidr" {
   description = "The CIDR block for the AWS VPC."
   default     = "10.0.0.0/16"
 }
 
-variable "aws_subnet_name" {
+variable "aws_subnet_1_name" {
   description = "The name for the AWS VPC Subnet."
   default     = "Demo-VPC-SYD-Subnet"
 }
 
-variable "aws_route_table_name" {
+variable "aws_route_table_1_name" {
   description = "The name for the AWS VPC Route Table."
   default     = "Demo-VPC-SYD-Route-Table"
 }
 
-variable "aws_vpn_gateway_name" {
+variable "aws_vpn_gateway_1_name" {
   description = "The name of the AWS VPN Gateway."
   default     = "Demo-VGW-SYD"
 }
 
-variable "aws_dx_gateway_name" {
+variable "aws_dx_gateway_1_name" {
   description = "The name of the AWS Direct Connect Gateway."
   default     = "Demo-DGW-SYD"
 }
 
-variable "aws_dx_gateway_asn" {
+variable "aws_dx_gateway_1_asn" {
   description = "The ASN to be configured on the AWS Direct Connect Gateway."
   default     = "64512"
 }
