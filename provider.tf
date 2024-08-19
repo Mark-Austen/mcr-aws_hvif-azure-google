@@ -16,7 +16,6 @@ provider "megaport" {
   access_key            = "api-key"
   secret_key            = "api-secret"
   accept_purchase_terms = true
-  delete_ports          = true
   environment           = "production"
 }
 
