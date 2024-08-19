@@ -1,6 +1,11 @@
-ariable "megaport_location_1" {
+variable "megaport_location_1" {
   description = "Megaport Data Centre location 1"
   default     = "Equinix SY1"
+}
+
+variable "megaport_location_2" {
+  description = "Megaport Data Centre location 2"
+  default     = "Equinix SY3"
 }
 
 variable "megaport_mcr_1_name" {
@@ -25,7 +30,7 @@ variable "megaport_mcr_1_asn" {
 
 variable "megaport_expressroute_vxc_1_name" {
   description = "Megaport ExpressRoute VXC name"
-  default     = "ExpressRoute VXC SYD"
+  default     = "Demo ExpressRoute VXC SYD"
 }
 
 variable "megaport_expressroute_bandwidth" {
@@ -38,49 +43,24 @@ variable "megaport_expressroute_vxc_1_term" {
   default     = 1
 }
 
-variable "aws_account_id" {
-  description = "AWS Account ID"
-  default     = "aws_account_id"
+variable "megaport_aws_port_location_1_name" {
+  description = "AWS Direct Connect port name"
+  default     = "Asia Pacific (Sydney) (ap-southeast-2)"
 }
 
-variable "aws_region" {
-  description = "The AWS region to create resources in."
-  default     = "ap-southeast-1"
+variable "megaport_aws_vxc_1_name" {
+  description = "Megaport AWS VXC name"
+  default     = "Demo AWS VXC SYD"
 }
 
-variable "aws_vpc_name" {
-  description = "The name for the AWS VPC."
-  default     = "Demo-VPC-SIN"
+variable "megaport_aws_vxc_1_bandwidth" {
+  description = "Megaport AWS VXC bandwidth"
+  default     = 50
 }
 
-variable "aws_vpc_cidr" {
-  description = "The CIDR block for the AWS VPC."
-  default     = "10.0.0.0/16"
-}
-
-variable "aws_subnet_name" {
-  description = "The name for the AWS VPC Subnet."
-  default     = "Demo-VPC-SIN-Subnet"
-}
-
-variable "aws_route_table_name" {
-  description = "The name for the AWS VPC Route Table."
-  default     = "Demo-VPC-SIN-Route-Table"
-}
-
-variable "aws_vpn_gateway_name" {
-  description = "The name of the AWS VPN Gateway."
-  default     = "Demo-VGW-SIN"
-}
-
-variable "aws_dx_gateway_name" {
-  description = "The name of the AWS Direct Connect Gateway."
-  default     = "Demo-DGW-SIN"
-}
-
-variable "aws_dx_gateway_asn" {
-  description = "The ASN to be configured on the AWS Direct Connect Gateway."
-  default     = "64512"
+variable "megaport_aws_vxc_1_term" {
+  description = "Megaport AWS VXC term"
+  default     = 1
 }
 
 variable "azure_region" {
@@ -201,4 +181,49 @@ variable "azure_vpn_gateway_sku" {
 variable "azure_vpn_gateway_gen" {
   description = "The Generation of the Azure Virtual Network Gateway"
   default     = "Generation2"
+}
+
+variable "aws_account_id" {
+  description = "AWS Account ID"
+  default     = "370553169139"
+}
+
+variable "aws_region" {
+  description = "The AWS region to create resources in."
+  default     = "ap-southeast-2"
+}
+
+variable "aws_vpc_name" {
+  description = "The name for the AWS VPC."
+  default     = "Demo-VPC-SYD"
+}
+
+variable "aws_vpc_cidr" {
+  description = "The CIDR block for the AWS VPC."
+  default     = "10.0.0.0/16"
+}
+
+variable "aws_subnet_name" {
+  description = "The name for the AWS VPC Subnet."
+  default     = "Demo-VPC-SYD-Subnet"
+}
+
+variable "aws_route_table_name" {
+  description = "The name for the AWS VPC Route Table."
+  default     = "Demo-VPC-SYD-Route-Table"
+}
+
+variable "aws_vpn_gateway_name" {
+  description = "The name of the AWS VPN Gateway."
+  default     = "Demo-VGW-SYD"
+}
+
+variable "aws_dx_gateway_name" {
+  description = "The name of the AWS Direct Connect Gateway."
+  default     = "Demo-DGW-SYD"
+}
+
+variable "aws_dx_gateway_asn" {
+  description = "The ASN to be configured on the AWS Direct Connect Gateway."
+  default     = "64512"
 }
