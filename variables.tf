@@ -174,7 +174,7 @@ variable "aws_account_id" {
   default     = "<aws account ID>"
 }
 
-variable "aws_region" {
+variable "aws_region_1" {
   description = "The AWS region to create resources in."
   default     = "ap-southeast-2"
 }
