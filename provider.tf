@@ -2,12 +2,15 @@ terraform {
   required_providers {
     megaport = {
       source  = "megaport/megaport"
+      version = ">=1.1.1"
     }
     aws = {
       source  = "hashicorp/aws"
+      version = ">=5.64.0"
     }
     azurerm = {
       source  = "hashicorp/azurerm"
+      version = ">=3.116.0"
     }
   }
 }
@@ -20,12 +23,11 @@ provider "megaport" {
 }
 
 provider "aws" {
-  region = var.aws_region
+  region = var.aws_region_1
   access_key = "access-key"
   secret_key = "secret-key"
 }
 
 provider "azurerm" {
-  skip_provider_registration = "true"
   features {} 
 }
