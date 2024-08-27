@@ -1,3 +1,5 @@
+// Megaport variables
+
 variable "megaport_location_1" {
   description = "Megaport Data Centre location 1"
   default     = "Equinix SY1"
@@ -63,52 +65,54 @@ variable "megaport_aws_vxc_1_term" {
   default     = 1
 }
 
-variable "azure_region" {
-  description = "The region to create the resource group and resources in on Azure"
-  default     = "Australia East"
-}
+// Azure variables
 
-variable "azure_resource_group_name" {
+variable "azure_resource_group_name_1" {
   description = "The name of the Azure resource group"
   default     = "demo-resource-group-syd"
 }
 
-variable "azure_virtual_network_name" {
+variable "azure_region_1" {
+  description = "The region to create the resource group and resources in on Azure"
+  default     = "Australia East"
+}
+
+variable "azure_virtual_network_name_1" {
   description = "The name of the Azure Virtual Network"
   default     = "demo-vnet-syd"
 }
 
-variable "azure_virtual_network_cidr" {
+variable "azure_virtual_network_cidr_1" {
   description = "The Azure Virtual Network CIDR"
   default     = ["10.2.0.0/16"]
 }
 
-variable "azure_virtual_network_subnet_name" {
+variable "azure_virtual_network_subnet_name_1" {
   description = "The Azure Virtual Network subnet name"
   default     = "demo-vnet-syd-subnet"
 }
 
-variable "azure_virtual_network_subnet" {
+variable "azure_virtual_network_subnet_1" {
   description = "The Azure Virtual Network subnet"
   default     = ["10.2.2.0/24"]
 }
 
-variable "azure_virtual_network_gateway_subnet" {
+variable "azure_virtual_network_gateway_subnet_1" {
   description = "The Azure Virtual Network Gateway subnet"
   default     = ["10.2.1.0/24"]
 }
 
-variable "azure_expressroute_name" {
+variable "azure_expressroute_name_1" {
   description = "The name of the Azure ExpressRoute"
   default     = "demo-expressroute-syd"
 }
 
-variable "azure_expressroute_peering_location" {
+variable "azure_expressroute_peering_location_1" {
   description = "The location of the Azure ExpressRoute"
   default     = "Sydney"
 }
 
-variable "azure_expressroute_bandwidth" {
+variable "azure_expressroute_bandwidth_1" {
   description = "Bandwidth required on the ExpressRoute Circuit"
   default     = 50
 }
@@ -123,17 +127,17 @@ variable "azure_expressroute_family" {
   default     = "MeteredData"
 }
 
-variable "azure_express_route_circuit_vlan" {
+variable "azure_express_route_circuit_vlan_1" {
   description = "Azure ExpressRoute VLAN"
   default     = 100
 }
 
-variable "azure_express_route_circuit_primary_subnet" {
+variable "azure_express_route_circuit_primary_subnet_1" {
   description = "Azure ExpressRoute primary subnet"
   default     = "192.168.100.0/30"
 }
 
-variable "azure_express_route_circuit_secondary_subnet" {
+variable "azure_express_route_circuit_secondary_subnet_1" {
   description = "Azure ExpressRoute secondary subnet"
   default     = "192.168.100.4/30"
 }
@@ -143,12 +147,12 @@ variable "megaport_azure_bgp_password" {
   default     = "password"
 }
 
-variable "azure_er_gateway_public_ip_name" {
+variable "azure_er_gateway_public_ip_name_1" {
   description = "The name of the Azure Virtual Network Gateway Public IP"
   default     = "demo-er-gw-syd-public-ip"
 }
 
-variable "azure_er_gateway_name" {
+variable "azure_er_gateway_name_1" {
   description = "The name of the Azure Virtual Network Gateway"
   default     = "demo-er-gw-syd"
 }
@@ -158,34 +162,16 @@ variable "azure_er_gateway_sku" {
   default     = "Standard"
 }
 
-variable "azure_virtual_network_gateway_connection_name" {
+variable "azure_virtual_network_gateway_connection_name_1" {
   description = "The name of the Azure Virtual Network Gateway Connection to ExpressRoute"
   default     = "demo-connection-syd"
 }
 
-variable "azure_vpn_gateway_public_ip_name" {
-  description = "The name of the Azure Virtual Network Gateway Public IP"
-  default     = "demo-vpn-gw-syd-public-ip"
-}
-
-variable "azure_vpn_gateway_name" {
-  description = "The name of the Azure Virtual Network Gateway"
-  default     = "demo-vpn-gw-syd"
-}
-
-variable "azure_vpn_gateway_sku" {
-  description = "The SKU of the Azure Virtual Network Gateway"
-  default     = "VpnGw2"
-}
-
-variable "azure_vpn_gateway_gen" {
-  description = "The Generation of the Azure Virtual Network Gateway"
-  default     = "Generation2"
-}
+// AWS variables
 
 variable "aws_account_id" {
   description = "AWS Account ID"
-  default     = "account ID"
+  default     = "<aws account ID>"
 }
 
 variable "aws_region" {
