@@ -42,8 +42,7 @@ real connections to AWS and Azure.
 * It helps if you're not logged into mutliple Microsoft accounts while running this.
 * The Azure ExpressRoute Gateway can take up to 20 minutes to deploy.
 * When you have completed, use `terraform destroy` so that you will stop incurring costs for the resources.
-* When destroying the deployment Terraform will prompt one two errors:
-  * AWS Virtual Gateway removal pending another operation - the re-run of `terraform destroy` will clear this.
+* When destroying the deployment Terraform will report an error stating Azure ExpressRoute Private Peering still exists and the Azure VXC cannot be removed. Log into the Azure portal and manually deplete the ExpressRoute Circuit private peering and re-run Terraform destory.
 
 ### Testing
 
