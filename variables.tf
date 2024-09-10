@@ -45,6 +45,11 @@ variable "megaport_expressroute_vxc_1_term" {
   default     = 1
 }
 
+variable "megaport_mcr_1_diversity_zone" {
+  description = "MCR Diversity Zone"
+  default     = "red"
+}
+
 variable "megaport_aws_port_location_1_name" {
   description = "AWS Direct Connect port name"
   default     = "Asia Pacific (Sydney) (ap-southeast-2)"
