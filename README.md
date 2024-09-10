@@ -56,7 +56,7 @@ real connections to AWS, Azure, and Google Cloud.
 ### Testing
 
 * As this is a baseline networking deployment I haven't included VMs but you can add these as required to run connectivity checks/tests.
-* Route advertisment between clouds can be checked using the Megaport MCR Looking Glass - BGP neighbours to AWS, Azure, and Google should be up, and 10.0.0.0/16 from AWS, 10.1.0.0/16 from Azure, and 10.3.0.0/16 from Google recevied.
+* Route advertisment between clouds can be checked using the Megaport MCR Looking Glass - BGP neighbours to AWS, Azure, and Google should be up, and 10.1.0.0/16 from AWS, 10.2.0.0/16 from Azure, and 10.3.0.0/16 from Google recevied.
 
 
 
