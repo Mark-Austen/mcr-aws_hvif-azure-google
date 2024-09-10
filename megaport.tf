@@ -72,3 +72,22 @@ resource "megaport_vxc" "aws_vxc_1" {
     }
   }
 }
+
+resource "megaport_vxc" "google_vxc_1" {
+  product_name         = "Google VXC"
+  rate_limit           = 50
+  contract_term_months = 1
+
+  a_end = {
+    requested_product_uid = megaport_mcr.mcr_1.product_uid
+  }
+
+  b_end = {}
+
+  b_end_partner_config = {
+    partner = "google"
+    google_config = {
+      pairing_key = google_compute_interconnect_attachment.vlan_attach_1.pairing_key
+    }
+  }
+}
