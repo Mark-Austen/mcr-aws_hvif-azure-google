@@ -209,6 +209,38 @@ variable "azure_er_gateway_sku" {
   default     = "Standard"
 }
 
+// Google Cloud Variables
+
+variable "google_region_1_name" {
+  description = "Google Cloud region name."
+  default     = "australia-southeast1"
+}
+
+variable "google_vpc_1_name" {
+  description = "The name for the Google Cloud VPC."
+  default     = "demo-vpc-sydney"
+}
+
+variable "google_subnet_1_name" {
+  description = "The name for the Google Cloud VPC Subnet."
+  default     = "subnet-1"
+}
+
+variable "google_vpc_1_cidr" {
+  description = "The CIDR block for the Google Cloud VPC."
+  default     = "10.3.0.0/16"
+}
+
+variable "google_cloud_router_1_name" {
+  description = "Google Cloud router name."
+  default     = "demo-cloud-router-syd"
+}
+
+variable "google_interconnect_attachment_1_name" {
+  description = "Google Cloud Interconnect Attachment name"
+  default     = "syd-attachment-1"
+}
+
 variable "azure_virtual_network_gateway_connection_name_1" {
   description = "The name of the Azure Virtual Network Gateway Connection to ExpressRoute"
   default     = "demo-connection-syd"
