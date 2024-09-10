@@ -12,7 +12,7 @@ variable "megaport_location_2" {
 
 variable "megaport_mcr_1_name" {
   description = "Megaport MCR name"
-  default     = "Demo MCR SYD"
+  default     = "MCR SYD"
 }
 
 variable "megaport_mcr_1_term" {
@@ -32,7 +32,7 @@ variable "megaport_mcr_1_asn" {
 
 variable "megaport_expressroute_vxc_1_name" {
   description = "Megaport ExpressRoute VXC name"
-  default     = "Demo ExpressRoute VXC SYD"
+  default     = "Azure VXC SYD"
 }
 
 variable "megaport_expressroute_bandwidth" {
@@ -51,13 +51,13 @@ variable "megaport_mcr_1_diversity_zone" {
 }
 
 variable "megaport_aws_port_location_1_name" {
-  description = "AWS Direct Connect port name"
+  description = "AWS Direct Connect Hosted VIF port name"
   default     = "Asia Pacific (Sydney) (ap-southeast-2)"
 }
 
 variable "megaport_aws_vxc_1_name" {
   description = "Megaport AWS VXC name"
-  default     = "Demo AWS Hosted VIF VXC SYD"
+  default     = "AWS Hosted VIF VXC SYD"
 }
 
 variable "megaport_aws_vxc_1_bandwidth" {
@@ -84,7 +84,7 @@ variable "aws_region_1" {
 
 variable "aws_vpc_1_name" {
   description = "The name for the AWS VPC."
-  default     = "Demo-VPC-SYD"
+  default     = "VPC-SYD"
 }
 
 variable "aws_vpc_1_cidr" {
@@ -94,22 +94,22 @@ variable "aws_vpc_1_cidr" {
 
 variable "aws_subnet_1_name" {
   description = "The name for the AWS VPC Subnet."
-  default     = "Demo-VPC-SYD-Subnet"
+  default     = "VPC-SYD-Subnet"
 }
 
 variable "aws_route_table_1_name" {
   description = "The name for the AWS VPC Route Table."
-  default     = "Demo-VPC-SYD-Route-Table"
+  default     = "VPC-SYD-Route-Table"
 }
 
 variable "aws_vpn_gateway_1_name" {
   description = "The name of the AWS VPN Gateway."
-  default     = "Demo-VGW-SYD"
+  default     = "VGW-SYD"
 }
 
 variable "aws_dx_gateway_1_name" {
   description = "The name of the AWS Direct Connect Gateway."
-  default     = "Demo-DGW-SYD"
+  default     = "DGW-SYD"
 }
 
 variable "aws_dx_gateway_1_asn" {
@@ -121,7 +121,7 @@ variable "aws_dx_gateway_1_asn" {
 
 variable "azure_resource_group_name_1" {
   description = "The name of the Azure resource group"
-  default     = "demo-resource-group-syd"
+  default     = "resource-group-syd"
 }
 
 variable "azure_region_1" {
@@ -131,7 +131,7 @@ variable "azure_region_1" {
 
 variable "azure_virtual_network_name_1" {
   description = "The name of the Azure Virtual Network"
-  default     = "demo-vnet-syd"
+  default     = "vnet-syd"
 }
 
 variable "azure_virtual_network_cidr_1" {
@@ -141,7 +141,7 @@ variable "azure_virtual_network_cidr_1" {
 
 variable "azure_virtual_network_subnet_name_1" {
   description = "The Azure Virtual Network subnet name"
-  default     = "demo-vnet-syd-subnet"
+  default     = "vnet-subnet-syd"
 }
 
 variable "azure_virtual_network_subnet_1" {
@@ -156,7 +156,7 @@ variable "azure_virtual_network_gateway_subnet_1" {
 
 variable "azure_expressroute_name_1" {
   description = "The name of the Azure ExpressRoute"
-  default     = "demo-expressroute-syd"
+  default     = "expressroute-syd"
 }
 
 variable "azure_expressroute_peering_location_1" {
@@ -201,17 +201,22 @@ variable "megaport_azure_bgp_password" {
 
 variable "azure_er_gateway_public_ip_name_1" {
   description = "The name of the Azure Virtual Network Gateway Public IP"
-  default     = "demo-er-gw-syd-public-ip"
+  default     = "er-gw-syd-public-ip"
 }
 
 variable "azure_er_gateway_name_1" {
   description = "The name of the Azure Virtual Network Gateway"
-  default     = "demo-er-gw-syd"
+  default     = "er-gw-syd"
 }
 
 variable "azure_er_gateway_sku" {
   description = "The SKU of the Azure Virtual Network Gateway"
   default     = "Standard"
+}
+
+variable "azure_virtual_network_gateway_connection_name_1" {
+  description = "The name of the Azure Virtual Network Gateway Connection to ExpressRoute"
+  default     = "connection-syd"
 }
 
 // Google Cloud Variables
@@ -223,12 +228,12 @@ variable "google_region_1_name" {
 
 variable "google_vpc_1_name" {
   description = "The name for the Google Cloud VPC."
-  default     = "demo-vpc-sydney"
+  default     = "vpc-syd"
 }
 
 variable "google_subnet_1_name" {
   description = "The name for the Google Cloud VPC Subnet."
-  default     = "subnet-1"
+  default     = "vpc-syd-subnet-1"
 }
 
 variable "google_vpc_1_cidr" {
@@ -238,15 +243,10 @@ variable "google_vpc_1_cidr" {
 
 variable "google_cloud_router_1_name" {
   description = "Google Cloud router name."
-  default     = "demo-cloud-router-syd"
+  default     = "cloud-router-syd"
 }
 
 variable "google_interconnect_attachment_1_name" {
   description = "Google Cloud Interconnect Attachment name"
-  default     = "syd-attachment-1"
-}
-
-variable "azure_virtual_network_gateway_connection_name_1" {
-  description = "The name of the Azure Virtual Network Gateway Connection to ExpressRoute"
-  default     = "demo-connection-syd"
+  default     = "attachment-syd-1"
 }
