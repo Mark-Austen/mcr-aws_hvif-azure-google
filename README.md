@@ -1,4 +1,4 @@
-This example deploys end-to-end multicloud connectivity between an AWS VPC and Azure VNet using the Megaport Cloud Router (MCR). The following resources are deployed:
+This example deploys end-to-end multicloud connectivity between an AWS VPC, Azure VNet, and Google Cloud VPC using the Megaport Cloud Router (MCR). The following resources are deployed:
 
 * Megaport Cloud Router (MCR)
 * Megaport Virtual Cross Connect (VXC) to AWS Direct Connect
@@ -15,6 +15,11 @@ This example deploys end-to-end multicloud connectivity between an AWS VPC and A
 * Azure ExpressRoute to ExpressRoute Virtual Gateway Connection
 * Azure VNet
 * Azure VNet Subnet
+* Megaport Virtual Cross Connect (VXC) to Google Cloud Partner Interconnect VLAN Attachment
+* Google Cloud Partner Interconnect VLAN Attachment
+* Google Cloud Router
+* Google Cloud VPC
+* Google Cloud VPC Subnet
 
 ### Prerequisites
 
@@ -22,6 +27,9 @@ This example deploys end-to-end multicloud connectivity between an AWS VPC and A
 * Create Megaport API Key: [Link](https://docs.megaport.com/api/api-key/)
 * Create AWS Access Key: [Link](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)
 * Install Azure CLI Tools: [Link](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/azure-build)
+* Install Google Cloud gcloud CLI (for Mac use brew): [Link](https://cloud.google.com/sdk/docs/install)
+* Google Cloud project: [Link](https://console.cloud.google.com/projectcreate)
+* Enable the Google Compute Engine API for your project: [Link](https://console.developers.google.com/apis/library/compute.googleapis.com)
 
 ### Deployment Instructions
 
