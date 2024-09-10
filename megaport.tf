@@ -75,7 +75,7 @@ resource "megaport_vxc" "aws_vxc_1" {
 }
 
 resource "megaport_vxc" "google_vxc_1" {
-  product_name         = "Google VXC"
+  product_name         = var.megaport_google_vxc_1_name
   rate_limit           = 50
   contract_term_months = 1
 
