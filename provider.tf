@@ -33,6 +33,6 @@ provider "azurerm" {
 }
 
 provider "google" {
-  project = "<project name>"
-  region = "<region>"
+  project = "project_name"
+  region = "region"
 }
