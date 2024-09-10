@@ -39,6 +39,7 @@ This example deploys end-to-end multicloud connectivity between an AWS VPC, Azur
 * The variables.tf file is configured for deployment in Singapore, it can be adjusted for other locations and regions as required.
 * Authenticate to your Azure tenant using the Azure CLI: [Link](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/azure-build#authenticate-using-the-azure-cli)
 * Save the Azure tenant credentials locally as environment variables for use by Terraform: [Link](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/azure-build#set-your-environment-variables)
+* Authenticate to Google Cloud: [Link](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/google-cloud-platform-build#authenticate-to-google-cloud)
 * From the command line change to the directory containing the Terraform files.
 * Run `terraform init` to initialise Terraform and the providers.
 * Run `terraform apply` to deploy this example.
