@@ -18,6 +18,7 @@ resource "megaport_mcr" "mcr_1" {
   location_id              = data.megaport_location.megaport_location_1.id
   contract_term_months     = var.megaport_mcr_1_term
   port_speed               = var.megaport_mcr_1_speed
+  diversity_zone           = var.megaport_mcr_1_diversity_zone
 }
 
 resource "megaport_vxc" "expressroute_vxc_1" {
