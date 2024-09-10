@@ -2,7 +2,7 @@ terraform {
   required_providers {
     megaport = {
       source  = "megaport/megaport"
-      version = ">=1.1.1"
+      version = ">=1.1.5"
     }
     aws = {
       source  = "hashicorp/aws"
@@ -30,4 +30,9 @@ provider "aws" {
 
 provider "azurerm" {
   features {} 
+}
+
+provider "google" {
+  project = "<project name>"
+  region = "<region>"
 }
