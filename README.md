@@ -34,9 +34,9 @@ This example deploys end-to-end multicloud connectivity between an AWS VPC, Azur
 ### Deployment Instructions
 
 * Download or Clone this Terraform example.
-* Modify the provider.tf file with your own Megaport API Key/API Key Secret and AWS Access Key/Secret Key.
+* Modify the provider.tf file with your own Megaport API Key/API Key Secret, AWS Access Key/Secret Key, and Google Cloud project name and region.
 * Modify the variables.tf file with your own AWS Account ID.
-* The variables.tf file is configured for deployment in Singapore, it can be adjusted for other locations and regions as required.
+* The variables.tf file is configured for deployment in Sydney, it can be adjusted for other locations and regions as required.
 * Authenticate to your Azure tenant using the Azure CLI: [Link](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/azure-build#authenticate-using-the-azure-cli)
 * Save the Azure tenant credentials locally as environment variables for use by Terraform: [Link](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/azure-build#set-your-environment-variables)
 * Authenticate to Google Cloud: [Link](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/google-cloud-platform-build#authenticate-to-google-cloud)
@@ -47,7 +47,7 @@ This example deploys end-to-end multicloud connectivity between an AWS VPC, Azur
 ### Notes
 
 * This example will not work on the Megaport Staging environment. This is because it requires
-real connections to AWS and Azure.
+real connections to AWS, Azure, and Google Cloud.
 * It helps if you're not logged into mutliple Microsoft accounts while running this.
 * The Azure ExpressRoute Gateway can take up to 20 minutes to deploy.
 * When you have completed, use `terraform destroy` so that you will stop incurring costs for the resources.
@@ -56,7 +56,7 @@ real connections to AWS and Azure.
 ### Testing
 
 * As this is a baseline networking deployment I haven't included VMs but you can add these as required to run connectivity checks/tests.
-* Route advertisment between clouds can be checked using the Megaport MCR Looking Glass - BGP neighbours to both AWS and Azure should be up and 10.0.0.0/16 from AWS and 10.1.0.0/16 from Azure received.
+* Route advertisment between clouds can be checked using the Megaport MCR Looking Glass - BGP neighbours to AWS, Azure, and Google should be up, and 10.0.0.0/16 from AWS, 10.1.0.0/16 from Azure, and 10.3.0.0/16 from Google recevied.
 
 
 
