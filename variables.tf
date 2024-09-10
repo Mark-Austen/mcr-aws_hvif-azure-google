@@ -230,7 +230,7 @@ variable "azure_virtual_network_gateway_connection_name_1" {
   default     = "connection-syd"
 }
 
-// Google Cloud Variables
+// Google Cloud variables
 
 variable "google_region_1_name" {
   description = "Google Cloud region name"
