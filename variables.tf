@@ -30,25 +30,12 @@ variable "megaport_mcr_1_asn" {
   default     = 133937
 }
 
-variable "megaport_expressroute_vxc_1_name" {
-  description = "ExpressRoute VXC name"
-  default     = "Azure VXC SYD"
-}
-
-variable "megaport_expressroute_bandwidth" {
-  description = "Megaport ExpressRoute VXC bandwidth"
-  default     = 50
-}
-
-variable "megaport_expressroute_vxc_1_term" {
-  description = "Megaport Azure VXC term"
-  default     = 1
-}
-
 variable "megaport_mcr_1_diversity_zone" {
   description = "MCR Diversity Zone"
   default     = "red"
 }
+
+// Megaport - AWS variables
 
 variable "megaport_aws_port_location_1_name" {
   description = "AWS Direct Connect Hosted VIF port name"
@@ -61,14 +48,33 @@ variable "megaport_aws_vxc_1_name" {
 }
 
 variable "megaport_aws_vxc_1_bandwidth" {
-  description = "Megaport AWS VXC bandwidth"
+  description = "AWS VXC bandwidth"
   default     = 50
 }
 
 variable "megaport_aws_vxc_1_term" {
-  description = "Megaport AWS VXC term"
+  description = "AWS VXC term"
   default     = 1
 }
+
+// Megaport - Azure variables
+
+variable "megaport_expressroute_vxc_1_name" {
+  description = "ExpressRoute VXC name"
+  default     = "Azure VXC SYD"
+}
+
+variable "megaport_expressroute_bandwidth" {
+  description = "ExpressRoute VXC bandwidth"
+  default     = 50
+}
+
+variable "megaport_expressroute_vxc_1_term" {
+  description = "ExpressRoute VXC term"
+  default     = 1
+}
+
+// Megaport - Google Cloud variables
 
 variable "megaport_google_vxc_1_name" {
   description = "Google Cloud VXC name"
@@ -83,94 +89,94 @@ variable "aws_account_id" {
 }
 
 variable "aws_region_1" {
-  description = "The AWS region to create resources in."
+  description = "AWS region"
   default     = "ap-southeast-2"
 }
 
 variable "aws_vpc_1_name" {
-  description = "The name for the AWS VPC."
+  description = "AWS VPC name"
   default     = "VPC-SYD"
 }
 
 variable "aws_vpc_1_cidr" {
-  description = "The CIDR block for the AWS VPC."
+  description = "AWS VPC CIDR"
   default     = "10.1.0.0/16"
 }
 
 variable "aws_subnet_1_name" {
-  description = "The name for the AWS VPC Subnet."
+  description = "AWS VPC subnet name"
   default     = "VPC-SYD-Subnet"
 }
 
 variable "aws_route_table_1_name" {
-  description = "The name for the AWS VPC Route Table."
+  description = "AWS VPC Route Table"
   default     = "VPC-SYD-Route-Table"
 }
 
 variable "aws_vpn_gateway_1_name" {
-  description = "The name of the AWS VPN Gateway."
+  description = "AWS VPN Gateway name"
   default     = "VGW-SYD"
 }
 
 variable "aws_dx_gateway_1_name" {
-  description = "The name of the AWS Direct Connect Gateway."
+  description = "AWS Direct Connect Gateway name"
   default     = "DGW-SYD"
 }
 
 variable "aws_dx_gateway_1_asn" {
-  description = "The ASN to be configured on the AWS Direct Connect Gateway."
+  description = "AWS Direct Connect Gateway BGP ASN"
   default     = "64512"
 }
 
 // Azure variables
 
 variable "azure_resource_group_name_1" {
-  description = "The name of the Azure resource group"
+  description = "Azure Resource Group name"
   default     = "resource-group-syd"
 }
 
 variable "azure_region_1" {
-  description = "The region to create the resource group and resources in on Azure"
+  description = "Azure Region"
   default     = "Australia East"
 }
 
 variable "azure_virtual_network_name_1" {
-  description = "The name of the Azure Virtual Network"
+  description = "Azure Virtual Network name"
   default     = "vnet-syd"
 }
 
 variable "azure_virtual_network_cidr_1" {
-  description = "The Azure Virtual Network CIDR"
+  description = "Azure Virtual Network CIDR"
   default     = ["10.2.0.0/16"]
 }
 
 variable "azure_virtual_network_subnet_name_1" {
-  description = "The Azure Virtual Network subnet name"
+  description = "Azure Virtual Network subnet name"
   default     = "vnet-subnet-syd"
 }
 
 variable "azure_virtual_network_subnet_1" {
-  description = "The Azure Virtual Network subnet"
+  description = "Azure Virtual Network subnet"
   default     = ["10.2.2.0/24"]
 }
 
 variable "azure_virtual_network_gateway_subnet_1" {
-  description = "The Azure Virtual Network Gateway subnet"
+  description = "Azure Virtual Network Gateway subnet"
   default     = ["10.2.1.0/24"]
 }
 
 variable "azure_expressroute_name_1" {
-  description = "The name of the Azure ExpressRoute"
+  description = "Azure ExpressRoute name"
   default     = "expressroute-syd"
 }
 
 variable "azure_expressroute_peering_location_1" {
-  description = "The location of the Azure ExpressRoute"
+  description = "Azure ExpressRoute location"
   default     = "Sydney"
 }
 
 variable "azure_expressroute_bandwidth_1" {
-  description = "Bandwidth required on the ExpressRoute Circuit"
+  description = "ExpressRoute Circuit bandwidth"
   default     = 50
 }
 
@@ -200,54 +206,54 @@ variable "azure_express_route_circuit_secondary_subnet_1" {
 }
 
 variable "megaport_azure_bgp_password" {
-  description = "Azure ExpresRoute BGP Password"
+  description = "Azure ExpresRoute BGP password"
   default     = "password"
 }
 
 variable "azure_er_gateway_public_ip_name_1" {
-  description = "The name of the Azure Virtual Network Gateway Public IP"
+  description = "Azure Virtual Network Gateway Public IP name"
   default     = "er-gw-syd-public-ip"
 }
 
 variable "azure_er_gateway_name_1" {
-  description = "The name of the Azure Virtual Network Gateway"
+  description = "Azure Virtual Network Gateway name"
   default     = "er-gw-syd"
 }
 
 variable "azure_er_gateway_sku" {
-  description = "The SKU of the Azure Virtual Network Gateway"
+  description = "Azure Virtual Network Gateway SKU"
   default     = "Standard"
 }
 
 variable "azure_virtual_network_gateway_connection_name_1" {
-  description = "The name of the Azure Virtual Network Gateway Connection to ExpressRoute"
+  description = "Azure Virtual Network Gateway Connection to ExpressRoute name"
   default     = "connection-syd"
 }
 
 // Google Cloud Variables
 
 variable "google_region_1_name" {
-  description = "Google Cloud region name."
+  description = "Google Cloud region name"
   default     = "australia-southeast1"
 }
 
 variable "google_vpc_1_name" {
-  description = "The name for the Google Cloud VPC."
+  description = "Google Cloud VPC name"
   default     = "vpc-syd"
 }
 
 variable "google_subnet_1_name" {
-  description = "The name for the Google Cloud VPC Subnet."
+  description = "Google Cloud VPC subnet name"
   default     = "vpc-syd-subnet-1"
 }
 
 variable "google_vpc_1_cidr" {
-  description = "The CIDR block for the Google Cloud VPC."
+  description = "Google Cloud VPC CIDR"
   default     = "10.3.0.0/16"
 }
 
 variable "google_cloud_router_1_name" {
-  description = "Google Cloud router name."
+  description = "Google Cloud router name"
   default     = "cloud-router-syd"
 }
 
