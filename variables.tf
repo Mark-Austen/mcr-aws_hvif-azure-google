@@ -31,7 +31,7 @@ variable "megaport_mcr_1_asn" {
 }
 
 variable "megaport_expressroute_vxc_1_name" {
-  description = "Megaport ExpressRoute VXC name"
+  description = "ExpressRoute VXC name"
   default     = "Azure VXC SYD"
 }
 
@@ -56,7 +56,7 @@ variable "megaport_aws_port_location_1_name" {
 }
 
 variable "megaport_aws_vxc_1_name" {
-  description = "Megaport AWS VXC name"
+  description = "AWS VXC name"
   default     = "AWS Hosted VIF VXC SYD"
 }
 
@@ -68,6 +68,11 @@ variable "megaport_aws_vxc_1_bandwidth" {
 variable "megaport_aws_vxc_1_term" {
   description = "Megaport AWS VXC term"
   default     = 1
+}
+
+variable "megaport_google_vxc_1_name" {
+  description = "Google Cloud VXC name"
+  default     = "Google VXC SYD"
 }
 
 // AWS variables
