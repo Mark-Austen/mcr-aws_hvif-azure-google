@@ -2,11 +2,11 @@ terraform {
   required_providers {
     megaport = {
       source  = "megaport/megaport"
-      version = ">=1.1.5"
+      version = "1.1.8"
     }
     aws = {
       source  = "hashicorp/aws"
-      version = ">=5.64.0"
+      version = "5.67.0"
     }
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -14,7 +14,7 @@ terraform {
     }
     google = {
       source = "hashicorp/google"
-      version = ">=6.2.0"
+      version = "6.2.0"
     }
   }
 }
